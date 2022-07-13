@@ -9,7 +9,7 @@ env = Environment(loader=FileSystemLoader('templates'))
 template = env.get_template('template.html')
 
 df = pd.read_csv('Responses (1).csv')
-
+length = len(df.columns)
 def student():
     dict_ ={}
     pass
@@ -21,7 +21,8 @@ def working():
 
 print('creating dashboard ...')
 board = template.render(title='Covid-19 Survey',
-                        df = df)
+                        df = df,
+                        length = length)
 
 
 with open('templates/index.html', 'w') as f:

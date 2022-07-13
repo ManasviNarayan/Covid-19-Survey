@@ -14,6 +14,8 @@
 <body>
     <h1>Mental and Emotional wellbeing: Covid 19 survey and data analysis</h1>
     
-    <div>{{df}}</div>
+    {% for i in range(length) %}
+        <p>{{df.iloc[i]}}<\p>
+    {% endfor %}
 </body>
 </html>
