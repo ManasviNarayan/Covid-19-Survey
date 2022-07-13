@@ -10,6 +10,15 @@ template = env.get_template('template.html')
 
 df = pd.read_csv('Responses (1).csv')
 
+def student():
+    dict_ ={}
+    pass
+
+
+def working():
+    dict_ = {}
+    pass
+
 print('creating dashboard ...')
 board = template.render(title='Covid-19 Survey',
                         df = df)
